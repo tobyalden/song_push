@@ -54,11 +54,26 @@ Piece.prototype.isLegalMove = function(x, y) {
 
   } else if(this.type === "rook") {
 
-    if(x === this.x || y === this.y) {
+    if(x === this.x) {
+      for(var i = Math.min(y, this.y) + 1; i < Math.max(y, this.y); i++) {
+        if(getPieceAt(x, i) != null) {
+          return false;
+        }
+      }
       return true;
-    } else {
-      return false;
     }
+
+    if(y === this.y) {
+      for(var i = Math.min(x, this.x) + 1; i < Math.max(x, this.x); i++) {
+        if(getPieceAt(i, y) != null) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+
+    return false;
 
   }
 
