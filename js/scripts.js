@@ -1,7 +1,17 @@
 // JS
 
 var symbols = {
+  whiteking: '\u2654',
+  whitequeen: '\u2655',
+  whiterook: '\u2656',
+  whitebishop: '\u2657',
+  whiteknight: '\u2658',
   whitepawn: '\u2659',
+  blackking: '\u265A',
+  blackqueen: '\u265B',
+  blackrook: '\u265C',
+  blackbishop: '\u265D',
+  blackknight: '\u265E',
   blackpawn: '\u265F'
 }
 
@@ -14,8 +24,6 @@ function Piece(x, y, type, color) {
 }
 
 Piece.prototype.isLegalMove = function(x, y) {
-
-  // debugger;
 
   var pieceAt = getPieceAt(x, y);
   if(pieceAt != null && pieceAt.color === this.color) {
@@ -44,6 +52,14 @@ Piece.prototype.isLegalMove = function(x, y) {
         return false;
     }
 
+  } else if(this.type === "rook") {
+
+    if(x === this.x || y === this.y) {
+      return true;
+    } else {
+      return false;
+    }
+
   }
 
 }
@@ -59,6 +75,7 @@ function setUpBoard() {
   pieces.push(new Piece(5, 6, "pawn", "white"));
   pieces.push(new Piece(6, 6, "pawn", "white"));
   pieces.push(new Piece(7, 6, "pawn", "white"));
+  pieces.push(new Piece(7, 5, "rook", "white"));
   pieces.push(new Piece(0, 1, "pawn", "black"));
   pieces.push(new Piece(1, 1, "pawn", "black"));
   pieces.push(new Piece(2, 1, "pawn", "black"));
