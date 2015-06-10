@@ -1,3 +1,7 @@
 .selected {
   color: red;
 }
+
+#song-queue {
+  align: center;
+}

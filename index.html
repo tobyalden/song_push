@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>Chess</title>
+    <title>Song Push</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <script src='http://code.jquery.com/jquery-2.1.4.min.js'></script>
@@ -12,90 +12,19 @@
   <body>
     <div class="container">
 
-      <h1 id="selected-piece">Chess</h1>
+      <h1 class="text-center">Song Push</h1>
 
-      <table>
-        <tr>
-          <td id="0-0"></td>
-          <td id="1-0"></td>
-          <td id="2-0"></td>
-          <td id="3-0"></td>
-          <td id="4-0"></td>
-          <td id="5-0"></td>
-          <td id="6-0"></td>
-          <td id="7-0"></td>
-        </tr>
-        <tr>
-          <td id="0-1"></td>
-          <td id="1-1"></td>
-          <td id="2-1"></td>
-          <td id="3-1"></td>
-          <td id="4-1"></td>
-          <td id="5-1"></td>
-          <td id="6-1"></td>
-          <td id="7-1"></td>
-        </tr>
-        <tr>
-          <td id="0-2"></td>
-          <td id="1-2"></td>
-          <td id="2-2"></td>
-          <td id="3-2"></td>
-          <td id="4-2"></td>
-          <td id="5-2"></td>
-          <td id="6-2"></td>
-          <td id="7-2"></td>
-        </tr>
-        <tr>
-          <td id="0-3"></td>
-          <td id="1-3"></td>
-          <td id="2-3"></td>
-          <td id="3-3"></td>
-          <td id="4-3"></td>
-          <td id="5-3"></td>
-          <td id="6-3"></td>
-          <td id="7-3"></td>
-        </tr>
-        <tr>
-          <td id="0-4"></td>
-          <td id="1-4"></td>
-          <td id="2-4"></td>
-          <td id="3-4"></td>
-          <td id="4-4"></td>
-          <td id="5-4"></td>
-          <td id="6-4"></td>
-          <td id="7-4"></td>
-        </tr>
-        <tr>
-          <td id="0-5"></td>
-          <td id="1-5"></td>
-          <td id="2-5"></td>
-          <td id="3-5"></td>
-          <td id="4-5"></td>
-          <td id="5-5"></td>
-          <td id="6-5"></td>
-          <td id="7-5"></td>
-        </tr>
-        <tr>
-          <td id="0-6"></td>
-          <td id="1-6"></td>
-          <td id="2-6"></td>
-          <td id="3-6"></td>
-          <td id="4-6"></td>
-          <td id="5-6"></td>
-          <td id="6-6"></td>
-          <td id="7-6"></td>
-        </tr>
-        <tr>
-          <td id="0-7"></td>
-          <td id="1-7"></td>
-          <td id="2-7"></td>
-          <td id="3-7"></td>
-          <td id="4-7"></td>
-          <td id="5-7"></td>
-          <td id="6-7"></td>
-          <td id="7-7"></td>
-        </tr>
-      </table>
+      <div id="song-queue" class="col-mid-6 col-offset-3">
+        
+      </div>
+
+      <form id="add-song">
+        <div class="form-group">
+          <!-- <label for="song-url">Enter a YouTube URL:</label> -->
+          <input type="text" id="song-url" name="song-url" class="form-control" placeholder="Enter a YouTube URL">
+        </div>
+        <button type="submit" class="btn btn-success">Push</button>
+      </form>
 
     </div>
   </body>
